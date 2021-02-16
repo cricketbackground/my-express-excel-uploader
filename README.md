@@ -6,6 +6,10 @@ Browse and upload excel
 
 This project was bootstrapped with `npx express-generator --view=hbs --css=less --git my-express-excel-uploader`
 
+## Build Badge
+
+![Node.js CI](https://github.com/cricketbackground/my-express-excel-uploader/workflows/Node.js%20CI/badge.svg)
+
 ## Available Scripts
 
 In the project directory, you can run:
