@@ -25,8 +25,8 @@ Open [http://localhost:3000/orders](http://localhost:3000/orders) and upload a s
 
 ## Multer
 
-This project uses multer for file upload
+This project uses [multer](https://www.npmjs.com/package/multer) for file upload
 
 ## Read-excel-file
 
-This project [read-excel-file](https://www.npmjs.com/package/read-excel-file) to read excel file as rows
+This project uses [read-excel-file](https://www.npmjs.com/package/read-excel-file) to read excel file as rows
