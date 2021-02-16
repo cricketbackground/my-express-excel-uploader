@@ -10,6 +10,10 @@ This project was bootstrapped with `npx express-generator --view=hbs --css=less 
 
 ![Node.js CI](https://github.com/cricketbackground/my-express-excel-uploader/workflows/Node.js%20CI/badge.svg)
 
+## CodeQL Badge
+
+![CodeQL](https://github.com/cricketbackground/my-express-excel-uploader/workflows/CodeQL/badge.svg)
+
 ## Available Scripts
 
 In the project directory, you can run:
