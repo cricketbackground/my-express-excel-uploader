@@ -6,7 +6,6 @@ var lessMiddleware = require('less-middleware');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 var orders = require('./routes/orders');
 var uploader = require('./routes/upload');
 
@@ -24,7 +23,6 @@ app.use(lessMiddleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 app.use('/orders', orders);
 app.use('/upload', uploader);
 
