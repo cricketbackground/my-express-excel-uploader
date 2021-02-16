@@ -4,6 +4,8 @@ var multer  = require('multer')
 var upload = multer({ dest: './public/data/uploads/' })
 const readXlsxFile = require('read-excel-file/node');
 var fs = require('fs');
+const { promisify } = require('util')
+const unlinkAsync = promisify(fs.unlink)
 
 // The uploading will be completed once the middleware returns, i.e. once this route is hit.
 router.post('/', upload.single('orders_request'), function (req, res) {
@@ -16,11 +18,19 @@ router.post('/', upload.single('orders_request'), function (req, res) {
     readXlsxFile(fs.createReadStream(req.file.path)).then((rows) => {
         // `rows` is an array of rows
         console.log(rows);
+        // Process the rows...
     }).catch(reason => {
-        console.error("Reading XSLX File Failed", reason)
+        console.error("Reading XSLX File Failed", reason);
+    }).finally(() => {
+        // Delete the file like normal
+        unlinkAsync(req.file.path).then(r => {
+            console.log("File %s is successfully deleted", req.file.path);
+        }).catch(reason => {
+            console.error("Deleting file %s failed", req.file.path);
+        })
     });
 
-    //
+    // print response containing uploaded file properties - added to test
     return res.status(200).json({
         message: 'file submitted successfully',
         fieldName: req.file.fieldname,
