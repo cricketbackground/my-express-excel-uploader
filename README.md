@@ -14,6 +14,10 @@ This project was bootstrapped with `npx express-generator --view=hbs --css=less 
 
 ![CodeQL](https://github.com/cricketbackground/my-express-excel-uploader/workflows/CodeQL/badge.svg)
 
+## LGTM Badge
+
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/cricketbackground/my-express-excel-uploader.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/cricketbackground/my-express-excel-uploader/alerts/)
+
 ## Available Scripts
 
 In the project directory, you can run:
